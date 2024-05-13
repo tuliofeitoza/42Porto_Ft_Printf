@@ -6,7 +6,7 @@
 /*   By: tsilva-f <tsilva-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 21:11:22 by tsilva-f          #+#    #+#             */
-/*   Updated: 2024/05/13 23:43:26 by tsilva-f         ###   ########.fr       */
+/*   Updated: 2024/05/13 23:54:48 by tsilva-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int ft_printf(const char *content, ...)
     {
         if (content[iprint] == '%')
         {
-            iprint++;
-            
+            iprint++;   
         }
         else
             iprint = iprint + put_char(content[iprint]);
