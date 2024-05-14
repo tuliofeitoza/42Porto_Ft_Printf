@@ -6,33 +6,44 @@
 /*   By: tsilva-f <tsilva-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 21:11:22 by tsilva-f          #+#    #+#             */
-/*   Updated: 2024/05/13 23:54:48 by tsilva-f         ###   ########.fr       */
+/*   Updated: 2024/05/14 15:50:58 by tsilva-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-static void check(va_list args, const char *content, int *i)
+void    ft_put_char(char c, int *i)
 {
-    
+    write(1, &c, 1);
+    *i += 1;
+}
+
+static void ft_check(const char *content, va_list args, int *i)
+{
+    while(*content)
+    {
+        if (*content == '%')
+        {
+            content++;
+            if (content == 'c')
+                ft_put_char(va_arg(arg, int), id);
+            if (content == 's')
+                ft_put_str(va_arg(arg, char *), id)
+        }
+        else
+            ft_put_char(*content, id);
+        content++
+    }
 }
 
 int ft_printf(const char *content, ...)
 {
     va_list args;
-    unsigned int iprint;
+    unsigned int i;
 
-    iprint = 0; 
+    i = 0;
     va_start(args, content);
-    
-    while (content[iprint])
-    {
-        if (content[iprint] == '%')
-        {
-            iprint++;   
-        }
-        else
-            iprint = iprint + put_char(content[iprint]);
-        iprint++;
-    }     
+    ft_check(content, args, &i);
+    va_end(args);
+    return(i);  
 }
