@@ -6,32 +6,29 @@
 #    By: tsilva-f <tsilva-f@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/09 20:48:47 by tsilva-f          #+#    #+#              #
-#    Updated: 2024/05/14 15:33:14 by tsilva-f         ###   ########.fr        #
+#    Updated: 2024/05/27 20:22:28 by tsilva-f         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
+CC = cc 
+CFLAGS = -Wall -Wextra -Werror -g 
 
-FUNC = 
-
-CFLAGS = gcc -Wall -Wextra -Werror -g 
-
-RM = rm -rf
-
-OBJS = $(FUNC:.c=.o)
+SCR = ft_printf.c 
+OBJS = $(SCR:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
-$(OBJ): $(FUNC)
-	$(CFLAGS) -c $(FUNC)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS)
+	rm -rf $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
