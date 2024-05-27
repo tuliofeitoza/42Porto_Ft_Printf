@@ -21,4 +21,5 @@ int     ft_printf(const char *, ...);
 void    ft_putchar(char c, size_t *i);
 void    ft_putstr(const char *str, size_t *i);
 
+
 # endif
