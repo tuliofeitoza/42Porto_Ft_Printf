@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-![42porto printf](./imge/42portoprintf-tsilva-f.webp)
+<img src="./imge/42portoprintf-tsilva-f.webp" alt="42porto printf">
+
 <h2>Brief Description</h2>
 <p>
     Welcome to the <strong>ft_printf</strong> project! This project involves recoding the <code>printf()</code> function from the C standard library. The <code>printf()</code> function is a versatile and widely used function in C programming for formatted output. Through this project, you will delve into variadic functions, memory management, and the implementation of various format specifiers. By completing this project, you will not only improve your understanding of these concepts but also create a reusable library function for your future C projects.
