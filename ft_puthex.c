@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsilva-f <tsilva-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 23:23:30 by tsilva-f          #+#    #+#             */
-/*   Updated: 2024/05/30 01:51:00 by tsilva-f         ###   ########.fr       */
+/*   Created: 2024/05/29 19:58:27 by tsilva-f          #+#    #+#             */
+/*   Updated: 2024/05/30 01:50:33 by tsilva-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c, size_t *i)
+void	ft_puthex(unsigned int n, size_t *i, char *content)
 {
-	write(1, &c, 1);
-	(*i)++;
+	char	*str;
+	
+	if (*content == 'x')
+		str = "0123456789abcdef";
+	else
+		str = "0123456789ABCDEF";
+	if (n >= 16)
+		ft_puthex(n / 16, i, content);
+	ft_putchar(str[n % 16], i);
 }
