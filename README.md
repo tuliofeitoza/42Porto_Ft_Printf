@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="./imge/42portoprintf-tsilva-f.webp" alt="42porto printf">
+    <img src="./42portoprintf-tsilva-f.webp" alt="42porto printf">
 </head>
 <body>
 
