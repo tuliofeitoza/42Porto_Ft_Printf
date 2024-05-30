@@ -110,7 +110,7 @@ make m</code></pre>
 </ol>
 
 <h2 id="license">License</h2>
-<p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+<p>This project is licensed under the MIT License. </p>
 
 <hr>
 
