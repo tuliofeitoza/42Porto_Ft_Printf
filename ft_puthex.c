@@ -6,13 +6,13 @@
 /*   By: tsilva-f <tsilva-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:58:27 by tsilva-f          #+#    #+#             */
-/*   Updated: 2024/05/30 01:50:33 by tsilva-f         ###   ########.fr       */
+/*   Updated: 2024/05/30 02:05:22 by tsilva-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_puthex(unsigned int n, size_t *i, char *content)
+void	ft_puthex(unsigned int n, size_t *i, const char *content)
 {
 	char	*str;
 	
